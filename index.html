@@ -1,97 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SEO Boost Agency</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kamar Kitchen - Delicious Recipes for Every Occasion</title>
+    <meta name="description" content="Discover 100K+ delicious recipes, cooking tips, and culinary inspiration at Kamar Kitchen." />
+    
+    <style>
+        :root {
+            --color-primary: #8B4513;
+            --color-primary-light: #A0522D;
+            --color-bg: #fffaf7;
+            --color-text: #2d2d2d;
+            --color-text-light: #7a7a7a;
+            --color-border: #e0dcd7;
+            --color-accent: #fef3e7;
+            --color-orange: #d2691e;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --width-content: 1000px;
+            --border-radius: 0.5rem;
+            --font-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-system);
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-bg);
+        }
+
+        .container {
+            max-width: var(--width-content);
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        .header {
+            background: var(--color-primary);
+            color: var(--color-bg);
+            padding: var(--space-md) 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo a {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-bg);
+            text-decoration: none;
+        }
+
+        .nav {
+            display: flex;
+            gap: var(--space-lg);
+        }
+
+        .nav a {
+            color: var(--color-bg);
+            text-decoration: none;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--border-radius);
+        }
+
+        .nav a:hover {
+            background: var(--color-primary-light);
+        }
+
+        .footer {
+            background: var(--color-primary);
+            color: var(--color-bg);
+            padding: var(--space-2xl) 0 var(--space-lg);
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--color-bg);
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+            flex-wrap: wrap;
+        }
+
+        .footer-social a {
+            color: var(--color-bg);
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .footer-copyright {
+            font-size: 0.75rem;
+            opacity: 0.8;
+            border-top: 1px solid var(--color-primary-light);
+            padding-top: var(--space-lg);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, var(--color-accent) 0%, #f9ece0 100%);
+            padding: var(--space-2xl) 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--color-primary);
+            margin-bottom: var(--space-md);
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--color-text-light);
+            max-width: 700px;
+            margin: 0 auto var(--space-xl);
+        }
+
+        .btn {
+            padding: var(--space-lg) var(--space-2xl);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--color-orange);
+            color: var(--color-bg);
+            border-color: var(--color-orange);
+        }
+
+        .btn-primary:hover {
+            background: #b45217;
+            border-color: #b45217;
+            transform: translateY(-1px);
+        }
+
+    </style>
 </head>
+
 <body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="https://prepistry.com/">Kamar Kitchen</a>
+                </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container text-center">
-      <h1>SEO Boost Agency</h1>
-      <p>Grow your online presence with expert SEO strategies.</p>
-      <a href="#contact" class="btn btn-primary mt-3">Get Started</a>
-      <br /><br />
-      <a href="https://prepistry.com/" target="_blank" class="btn btn-outline-light">Visit Prepistry</a>
-    </div>
-  </section>
-
-  <!-- About Us -->
-  <section id="about" class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="section-title">About Us</h2>
-      <p class="lead">We help businesses rank higher on search engines with professional SEO services tailored to your goals.</p>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-5">
-    <div class="container">
-      <h2 class="section-title text-center">Our Services</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">On-Page SEO</h5>
-              <p class="card-text">Optimize your content and structure for search engines.</p>
+                <nav class="nav">
+                    <a href="/">Home</a>
+                    <a href="/recipes">Recipes</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                </nav>
             </div>
-          </div>
         </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Technical SEO</h5>
-              <p class="card-text">Improve your site’s speed, performance, and indexing.</p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Discover Delicious Recipes for Every Occasion</h1>
+                <p>Join our cooking community and explore over 100,000 tested recipes, expert cooking tips, and culinary inspiration. Let's create magic in your kitchen!</p>
+                <a href="/recipes" class="btn btn-primary">Explore Recipes</a>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Link Building</h5>
-              <p class="card-text">Gain authority with powerful backlinks.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <h3>
+                    Kamar Kitchen by Chef Callie Renner
+                </h3>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="section-title text-center">Contact Us</h2>
-      <form class="row g-3">
-        <div class="col-md-6">
-          <input type="text" class="form-control" placeholder="Your Name" required />
-        </div>
-        <div class="col-md-6">
-          <input type="email" class="form-control" placeholder="Your Email" required />
-        </div>
-        <div class="col-12">
-          <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
-        </div>
-        <div class="col-12 text-center">
-          <button type="submit" class="btn btn-primary px-4">Send</button>
-        </div>
-      </form>
-    </div>
-  </section>
+            <div class="footer-links">
+                <a href="/about">About Us</a>
+                <a href="/terms">Terms</a>
+                <a href="/contact">Contact Us</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/cookies">Cookie Policy</a>
+                <a href="/disclaimer">Disclaimer</a>
+            </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container text-center py-3">
-      <p>© 2025 SEO Boost Agency. All rights reserved. | <a href="https://prepistry.com/" target="_blank">Prepistry</a></p>
-    </div>
-  </footer>
+            <div class="footer-social">
+                <a href="#">Facebook</a>
+                <a href="#">Pinterest</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            <div class="footer-copyright">
+                <p>Copyright © 2025 Kamar Kitchen</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
