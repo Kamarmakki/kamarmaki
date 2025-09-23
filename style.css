@@ -1,0 +1,113 @@
+/* ========== style.css (يجب أن يكون في جذر الثيم) ========== */
+
+/*
+Theme Name: Kamar Hkombat
+Theme URI: https://kamarhkombat.com
+Author: Kamar Hkombat Team
+Author URI: https://kamarhkombat.com
+Description: High-performance bilingual WordPress theme for services, tools and pricing.
+Version: 1.0.0
+License: GPL v2 or later
+Text Domain: kamar
+*/
+
+/* ---------- 1) Tailwind JIT (محتوى الملف المضغوط < 10 KB) ---------- */
+/* ! tailwindcss v3.4.1 | MIT License */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* ---------- 2) Custom Fonts (Cairo & Inter) ---------- */
+@font-face {
+  font-family: 'Cairo';
+  src: url('assets/fonts/cairo-subset.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('assets/fonts/inter-subset.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* ---------- 3) Minimal Custom Utilities ---------- */
+html                  { scroll-behavior: smooth; }
+body                  { font-family: 'Inter', sans-serif; }
+[dir="rtl"] body      { font-family: 'Cairo', sans-serif; }
+[dir="rtl"] .flip     { transform: scaleX(-1); }
+
+/* ---------- 4) Safe-list لأي كود قد يُنشئه ACF/Gutenberg ---------- */
+.bg-primary-600        { background-color: #2563eb; }
+.bg-primary-700:hover  { background-color: #1d4ed8; }
+.text-primary-600      { color: #2563eb; }
+
+/* ---------- 5) رسمي بسيط للعناصر التي لا تُولدها Tailwind ---------- */
+.prose {
+  line-height: 1.65;
+  max-width: 65ch;
+}
+.prose h1, .prose h2, .prose h3 {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.prose p {
+  margin-bottom: 1em;
+}
+
+/* ---------- 6) تصغير حجم الشعار ---------- */
+.site-logo {
+  height: 2rem;          /* 32px */
+  width: auto;
+}
+
+/* ---------- 7) زر العودة للأعلى ---------- */
+#scroll-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 50;
+  transition: opacity 0.2s;
+}
+#scroll-top.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ---------- 8) تصغير كروت الخدمات/الأدوات ---------- */
+.service-card,
+.tool-card,
+.article-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: block;
+  transition: box-shadow 0.2s;
+}
+.service-card:hover,
+.tool-card:hover,
+.article-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ---------- 9) RTL سريع للعناصر الأساسية ---------- */
+[dir="rtl"] .text-left   { text-align: right !important; }
+[dir="rtl"] .text-right  { text-align: left !important; }
+[dir="rtl"] .left-auto   { right: auto !important; }
+[dir="rtl"] .right-auto  { left: auto !important; }
+
+/* ---------- 10) إخفاء قائمة الموبايل افتراضياً ---------- */
+#mobile-nav.hidden {
+  display: none;
+}
+
+/* ---------- 11) تصغير حجم الخطوط على الشاشات الصغيرة ---------- */
+@media (max-width: 640px) {
+  .text-6xl { font-size: 2.25rem; } /* 36px */
+  .text-4xl { font-size: 1.875rem; } /* 30px */
+}
+
+/* ---------- 12) طباعة بسيطة (إخفاء العناصر غير الضرورية) ---------- */
+@media print {
+  #scroll-top, #mobile-nav, footer {
+    display: none;
+  }
+}

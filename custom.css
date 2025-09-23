@@ -1,0 +1,19 @@
+/* k: Cairo & Inter fallbacks plus minimal custom utilities */
+@font-face {
+  font-family: 'Cairo';
+  src: url('../fonts/cairo-subset.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter-subset.woff2') format('woff2');
+  font-display: swap;
+}
+/* k: smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+/* k: rtl/ltr quick flip */
+[dir="rtl"] .flip {
+  transform: scaleX(-1);
+}
