@@ -1,0 +1,266 @@
+/*
+Theme Name: Kamar SEO
+Theme URI: https://kamar.hkombat.com/
+Author: Kamar Team
+Author URI: https://kamar.hkombat.com/
+Description: Lightweight, fast, and modern Arabic SEO theme.
+Version: 1.1.0
+Text Domain: kamar-seo
+*/
+
+/*=========  متغيرات الألوان والانتقالات  =========*/
+:root {
+  --primary      : #1a237e;
+  --secondary    : #d4af37;
+  --dark         : #212121;
+  --light        : #f5f5f5;
+  --white        : #ffffff;
+  --gray         : #6c757d;
+  --transition   : all .3s ease;
+}
+
+/*=========  أساسيات الجسم  =========*/
+body {
+  margin           : 0;
+  font-family      : 'Cairo', sans-serif;
+  background       : var(--light);
+  color            : var(--dark);
+  line-height      : 1.6;
+  overflow-x       : hidden;
+  direction        : rtl;        /* دعم RTL تلقائي */
+  unicode-bidi     : embed;
+}
+
+/*=========  الحاويات  =========*/
+.container {
+  width            : 90%;
+  max-width        : 1140px;
+  margin-inline    : auto;
+  padding-inline   : 1rem;
+}
+
+/*=========  ترويسة الموقع  =========*/
+.site-header {
+  background       : var(--white);
+  box-shadow       : 0 2px 5px rgba(0,0,0,.05);
+  padding          : 1rem 0;
+}
+.site-header .container {
+  display          : flex;
+  align-items      : center;
+  justify-content  : space-between;
+  flex-wrap        : wrap;
+  gap              : 1rem;
+}
+.site-header nav ul {
+  display          : flex;
+  list-style       : none;
+  margin           : 0;
+  padding          : 0;
+  gap              : 1.5rem;
+}
+.site-header nav a {
+  text-decoration  : none;
+  color            : var(--dark);
+  font-weight      : 500;
+  transition       : var(--transition);
+}
+.site-header nav a:hover {
+  color            : var(--primary);
+}
+
+/*=========  قسم البطل (Hero)  =========*/
+.hero {
+  background       : linear-gradient(135deg, var(--primary), var(--secondary));
+  color            : var(--white);
+  padding          : 4rem 0;
+  text-align       : center;
+}
+.hero h1 {
+  font-size        : 2.5rem;
+  margin-bottom    : 1rem;
+}
+.hero p {
+  font-size        : 1.25rem;
+  margin-bottom    : 2rem;
+}
+
+/*=========  الأزرار  =========*/
+.btn {
+  display          : inline-block;
+  padding          : .75rem 1.75rem;
+  border-radius    : 4px;
+  text-decoration  : none;
+  transition       : var(--transition);
+  cursor           : pointer;
+  border           : none;
+}
+.btn-primary {
+  background       : var(--primary);
+  color            : var(--white);
+}
+.btn-primary:hover {
+  background       : var(--secondary);
+  color            : var(--dark);
+}
+
+/*=========  شبكة التدوينات  =========*/
+.posts-grid {
+  display          : grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap              : 1.5rem;
+}
+.post-card {
+  background       : var(--white);
+  padding          : 1.5rem;
+  border-radius    : 10px;
+  box-shadow       : 0 5px 15px rgba(0,0,0,.05);
+  transition       : var(--transition);
+}
+.post-card:hover {
+  transform        : translateY(-4px);
+}
+.post-card h2 {
+  margin           : 0 0 .5rem;
+  font-size        : 1.25rem;
+}
+.post-card h2 a {
+  color            : var(--primary);
+  text-decoration  : none;
+}
+.post-card p {
+  color            : var(--gray);
+}
+
+/*=========  حقوق الفوتر  =========*/
+.site-footer {
+  background       : var(--dark);
+  color            : var(--light);
+  text-align       : center;
+  padding          : 2rem 0;
+  margin-top       : 3rem;
+}
+.site-footer a {
+  color            : var(--secondary);
+}
+
+/*=========  زر العودة للأعلى  =========*/
+#scroll-top {
+  position         : fixed;
+  bottom           : 20px;
+  right            : 20px;
+  background       : var(--primary);
+  color            : var(--white);
+  border           : none;
+  border-radius    : 50%;
+  width            : 45px;
+  height           : 45px;
+  font-size        : 1.2rem;
+  cursor           : pointer;
+  opacity          : .8;
+  transition       : var(--transition);
+}
+#scroll-top:hover {
+  opacity          : 1;
+  transform        : scale(1.1);
+}
+
+/*=========  نموذج الاتصال  =========*/
+.contact-form {
+  display          : flex;
+  flex-direction   : column;
+  gap              : 1rem;
+  max-width        : 700px;
+  margin           : 0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+  padding          : .75rem 1rem;
+  border           : 1px solid #ccc;
+  border-radius    : 4px;
+  font-family      : inherit;
+}
+.contact-form textarea {
+  min-height       : 140px;
+  resize           : vertical;
+}
+.grid-2 {
+  display          : grid;
+  grid-template-columns: 1fr 1fr;
+  gap              : 1rem;
+}
+@media (max-width:600px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*=========  ترقيم الصفحات  =========*/
+.pagination {
+  display          : flex;
+  justify-content  : center;
+  align-items      : center;
+  gap              : .5rem;
+  margin-top       : 2rem;
+}
+.pagination a,
+.pagination span {
+  padding          : .5rem .9rem;
+  border-radius    : 4px;
+  text-decoration  : none;
+  background       : var(--white);
+  color            : var(--dark);
+  box-shadow       : 0 2px 5px rgba(0,0,0,.05);
+  transition       : var(--transition);
+}
+.pagination a:hover,
+.pagination .current {
+  background       : var(--primary);
+  color            : var(--white);
+}
+
+/*=========  أخطاء 404 وصفحات فارغة  =========*/
+.error-404,
+.no-results {
+  text-align       : center;
+  padding          : 3rem 1rem;
+}
+.error-404 h1,
+.no-results h1 {
+  font-size        : 4rem;
+  margin-bottom    : 1rem;
+  color            : var(--gray);
+}
+
+/*=========  ترويسة الأرشيف والبحث  =========*/
+.archive-title,
+.search-title {
+  margin-bottom    : 2rem;
+  font-size        : 2rem;
+  color            : var(--primary);
+}
+
+/*=========  تعليقات  =========*/
+.comment-list {
+  list-style       : none;
+  padding          : 0;
+  margin           : 0;
+}
+.comment-list li {
+  background       : var(--white);
+  padding          : 1rem;
+  border-radius    : 6px;
+  margin-bottom    : 1rem;
+  box-shadow       : 0 2px 5px rgba(0,0,0,.05);
+}
+.comment-form input,
+.comment-form textarea {
+  width            : 100%;
+  margin-bottom    : 1rem;
+}
+
+/*=========  utilities  =========*/
+.text-center { text-align: center; }
+.section-padding { padding: 3rem 0; }
+.mb-1 { margin-bottom: 1rem; }
+.mt-1 { margin-top: 1rem; }

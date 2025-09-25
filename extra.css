@@ -1,0 +1,7 @@
+/* تنسيقات إضافية للقالب */
+.posts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
+.post-card{background:#fff;padding:1.5rem;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,.05)}
+.post-card h2{margin-bottom:.5rem;font-size:1.25rem}
+.post-card h2 a{color:var(--primary);text-decoration:none}
+.post-card p{color:var(--gray)}
+.archive-title,.search-title{margin-bottom:2rem;font-size:2rem}

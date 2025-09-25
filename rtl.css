@@ -1,0 +1,27 @@
+/*
+Theme Name: Kamar SEO - RTL
+Description: RTL styles for Kamar SEO theme
+*/
+
+body {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+/* تعديل الشبكة */
+.posts-grid {
+  direction: rtl;
+}
+
+/* توسيط النصوص */
+.site-header,
+.site-main,
+.footer {
+  text-align: right;
+}
+
+/* تعديل الأسهم في الترقيم */
+.pagination .prev,
+.pagination .next {
+  transform: scaleX(-1);
+}
